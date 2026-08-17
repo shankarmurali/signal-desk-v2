@@ -1,0 +1,57 @@
+name: Build & publish daily issue
+
+on:
+  schedule:
+    - cron: "30 1 * * *"   # 01:30 UTC = 07:00 IST, every day
+  workflow_dispatch: {}     # manual trigger from the Actions tab
+  push:
+    branches: [main]
+    paths: ["config/**", "templates/**", "scripts/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build today's issue (no API keys used)
+        run: python scripts/build_issue.py
+
+      - name: Commit generated issue
+        run: |
+          git config user.name "signal-desk-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/ issues_md/
+          git diff --cached --quiet || git commit -m "issue: $(date -u +%F)"
+          git push
+
+      - name: Upload site for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
