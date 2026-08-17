@@ -1,0 +1,28 @@
+# {{ cfg.title }} — Issue #{{ issue_no }} · {{ display_date }}
+
+*{{ cfg.tagline }}*
+
+{% if sections.top_signals %}## Top Signals
+{% for it in sections.top_signals %}
+- **[{{ it.title }}]({{ it.url }})** — {{ it.source }}{% if it.summary %}
+  {{ it.summary }}{% endif %}
+{% endfor %}{% endif %}
+
+{% if sections.incidents %}## Incident Watch
+{% for inc in sections.incidents %}
+- `{{ inc.severity|upper }}` **[{{ inc.title }}]({{ inc.url }})** ({{ inc.date }}){% if inc.summary %}
+  {{ inc.summary }}{% endif %}
+{% endfor %}{% endif %}
+
+{% if sections.discussions %}## Interesting Discussions
+{% for it in sections.discussions %}
+- **[{{ it.title }}]({{ it.url }})** — {{ it.summary }}
+{% endfor %}{% endif %}
+
+{% if sections.research %}## Research Corner
+{% for it in sections.research %}
+- **[{{ it.title }}]({{ it.url }})**{% if it.authors %} — {{ it.authors }}{% endif %}
+{% endfor %}{% endif %}
+
+---
+*Curated automatically from public, keyless sources. [Archive]({{ cfg.site_url }}) · [RSS]({{ cfg.site_url }}/feed.xml)*

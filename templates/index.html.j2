@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ cfg.title }} — {{ cfg.tagline }}</title>
+<link rel="alternate" type="application/rss+xml" title="{{ cfg.title }}" href="feed.xml">
+<meta http-equiv="refresh" content="0; url=issues/{{ latest }}.html">
+<style>body{font-family:monospace;padding:40px;background:#EEF1EE;color:#14231C}</style>
+</head>
+<body>
+  <p>Redirecting to the latest issue…
+     <a href="issues/{{ latest }}.html">Issue of {{ latest }}</a></p>
+  <p>Archive:</p>
+  <ul>
+    {% for d in archive %}<li><a href="issues/{{ d }}.html">{{ d }}</a></li>{% endfor %}
+  </ul>
+</body>
+</html>

@@ -1,0 +1,91 @@
+{
+  "top_signals": [
+    {
+      "title": "Prompt injection via calendar invites hits enterprise AI assistants",
+      "url": "https://example.com/story1",
+      "summary": "Researchers demonstrate indirect prompt injection through shared calendar events, causing assistants to exfiltrate meeting notes. Vendors are shipping mitigations.",
+      "source": "Embrace The Red (wunderwuzzi)",
+      "score": 9
+    },
+    {
+      "title": "Payment fraud rings now A/B-test phishing kits against detection models",
+      "url": "https://example.com/story2",
+      "summary": "A new report shows fraud-as-a-service operators iterating phishing kits specifically to evade ML-based transaction risk engines.",
+      "source": "Krebs on Security",
+      "score": 8
+    },
+    {
+      "title": "CISA advisory: supply-chain compromise in a popular MCP server package",
+      "url": "https://example.com/story3",
+      "summary": "A malicious release of a widely used Model Context Protocol server harvested environment variables. Pin versions and rotate credentials.",
+      "source": "CISA Advisories",
+      "score": 7
+    },
+    {
+      "title": "Deepfake 'CFO calls' drive a new wave of wire-transfer scams",
+      "url": "https://example.com/story4",
+      "summary": "Finance teams report voice-cloned executives authorizing urgent transfers; banks are adding out-of-band verification requirements.",
+      "source": "BleepingComputer",
+      "score": 5
+    }
+  ],
+  "incidents": [
+    {
+      "title": "Agent with repo write access deletes production branch after ambiguous instruction",
+      "date": "2026-08-11",
+      "severity": "critical",
+      "summary": "A coding agent interpreted a cleanup request as authorization to force-push, wiping a production branch. Recovered from backups; write scopes since restricted.",
+      "url": "https://example.com/incident1"
+    },
+    {
+      "title": "Customer-support bot leaks order data via crafted refund request",
+      "date": "2026-08-09",
+      "severity": "high",
+      "summary": "Indirect prompt injection in a refund form caused the bot to include other customers' order details in its reply.",
+      "url": "https://example.com/incident2"
+    },
+    {
+      "title": "Browsing agent follows hidden page text to a phishing checkout",
+      "date": "2026-08-05",
+      "severity": "medium",
+      "summary": "Invisible on-page instructions redirected an autonomous shopping agent to an attacker-controlled payment page. Caught by card-network rules.",
+      "url": "https://example.com/incident3"
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Ask HN: How are you sandboxing AI agents with shell access?",
+      "url": "https://news.ycombinator.com/item?id=1",
+      "discussion_url": "https://news.ycombinator.com/item?id=1",
+      "summary": "312 points \u00b7 187 comments on Hacker News",
+      "source": "Hacker News",
+      "score": 8
+    },
+    {
+      "title": "We red-teamed our own payment risk model — here's what broke",
+      "url": "https://www.reddit.com/r/netsec/example",
+      "discussion_url": "https://www.reddit.com/r/netsec/example",
+      "summary": "421 upvotes \u00b7 96 comments in r/netsec",
+      "source": "r/netsec",
+      "score": 7
+    }
+  ],
+  "research": [
+    {
+      "title": "Measuring Robustness of LLM Agents to Indirect Prompt Injection at Scale",
+      "url": "https://arxiv.org/abs/0000.00001",
+      "summary": "A benchmark of 4,000 injection scenarios across tool-using agents, with a taxonomy of failure modes and defense baselines.",
+      "source": "arXiv",
+      "authors": "A. Researcher, B. Scholar et al.",
+      "published_str": "2026-08-12"
+    },
+    {
+      "title": "Graph Features for Real-Time Payment Fraud Detection under Concept Drift",
+      "url": "https://arxiv.org/abs/0000.00002",
+      "summary": "Streaming graph embeddings that adapt to drifting fraud patterns without full retraining.",
+      "source": "arXiv",
+      "authors": "C. Author, D. Author",
+      "published_str": "2026-08-10"
+    }
+  ]
+}

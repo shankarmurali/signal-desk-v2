@@ -1,0 +1,105 @@
+# Signal Desk v2 — source configuration
+# Every source here is free and requires NO API key.
+
+newsletter:
+  title: "Signal Desk"
+  tagline: "AI security, fraud & trust-and-safety intelligence"
+  site_url: "https://shankarmurali.github.io/signal-desk-v2"   # update after enabling Pages
+  max_items_per_section: 8
+  lookback_hours: 36        # how far back a daily issue looks
+
+# ── Section 1: Top Signals ─────────────────────────────────────────
+# RSS feeds. weight = editorial trust boost added to the ranking score.
+rss_feeds:
+  - name: "Krebs on Security"
+    url: "https://krebsonsecurity.com/feed/"
+    weight: 3
+  - name: "Schneier on Security"
+    url: "https://www.schneier.com/feed/atom/"
+    weight: 3
+  - name: "The Hacker News"
+    url: "https://feeds.feedburner.com/TheHackersNews"
+    weight: 2
+  - name: "BleepingComputer"
+    url: "https://www.bleepingcomputer.com/feed/"
+    weight: 2
+  - name: "Google Online Security Blog"
+    url: "https://security.googleblog.com/feeds/posts/default"
+    weight: 2
+  - name: "Microsoft Security Blog"
+    url: "https://www.microsoft.com/en-us/security/blog/feed/"
+    weight: 2
+  - name: "Simon Willison"
+    url: "https://simonwillison.net/atom/everything/"
+    weight: 2
+  - name: "Embrace The Red (wunderwuzzi)"
+    url: "https://embracethered.com/blog/index.xml"
+    weight: 3
+  - name: "Trail of Bits"
+    url: "https://blog.trailofbits.com/feed/"
+    weight: 2
+  - name: "CISA Advisories"
+    url: "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+    weight: 2
+
+# Keywords that boost a story's score (case-insensitive substring match).
+boost_keywords:
+  - prompt injection
+  - ai agent
+  - llm
+  - jailbreak
+  - fraud
+  - payment
+  - phishing
+  - account takeover
+  - deepfake
+  - scam
+  - mcp
+  - model context protocol
+  - supply chain
+  - trust and safety
+
+# ── Section 2: Incident Watch ──────────────────────────────────────
+# Pulls the newest incident YAMLs from your AI Agent Incident Tracker
+# repo via the public GitHub API (no key; 60 req/hr is plenty for a cron).
+incident_tracker:
+  enabled: true
+  repo: "shankarmurali/ai-agent-incident-tracker"   # <-- set to your tracker repo
+  incidents_path: "incidents"
+  max_items: 5
+
+# ── Section 3: Interesting Discussions ─────────────────────────────
+# Hacker News via the free Algolia search API (no key).
+hackernews:
+  enabled: true
+  queries:
+    - "prompt injection"
+    - "AI security"
+    - "LLM jailbreak"
+    - "payment fraud"
+    - "AI agent"
+  min_points: 40
+
+# Reddit public JSON endpoints (no key). Read-only, low volume.
+reddit:
+  enabled: true
+  subreddits:
+    - netsec
+    - cybersecurity
+    - MachineLearning
+  min_score: 60
+
+# Lobste.rs public JSON (no key).
+lobsters:
+  enabled: true
+  tags: ["security", "ai"]
+
+# ── Section 4: Research Corner ─────────────────────────────────────
+# arXiv public Atom API (no key).
+arxiv:
+  enabled: true
+  queries:
+    - 'all:"prompt injection"'
+    - 'all:"adversarial" AND all:"large language model"'
+    - 'all:"fraud detection"'
+  max_items: 5

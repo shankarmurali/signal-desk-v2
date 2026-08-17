@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Desk — Issue #1 · 2026-08-17</title>
+<link rel="alternate" type="application/rss+xml" title="Signal Desk" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1EE; --ink:#14231C; --accent:#1E6E52; --accent-soft:#D8E6DF;
+    --amber:#B4690E; --critical:#A32C1C; --muted:#5B6B62; --rule:#C6D0C9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.55;}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px;}
+  a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;}
+  a:hover{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  /* masthead */
+  header{border-bottom:3px solid var(--ink);padding-bottom:18px;margin-bottom:8px;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+          text-transform:uppercase;color:var(--muted);}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(38px,8vw,58px);line-height:.95;margin:.15em 0 .1em;letter-spacing:-.02em;}
+  h1 .dot{color:var(--accent);}
+  .issue-line{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+              display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* frequency rule under masthead */
+  .freq{display:flex;gap:3px;align-items:flex-end;height:16px;margin:14px 0 34px;}
+  .freq span{width:4px;background:var(--accent);opacity:.75;border-radius:1px;}
+
+  /* sections */
+  section{margin-bottom:46px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
+           letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+           border-bottom:1px solid var(--rule);padding-bottom:7px;margin-bottom:18px;
+           display:flex;justify-content:space-between;}
+  .eyebrow .count{color:var(--muted);}
+
+  article{margin-bottom:22px;}
+  .headline{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+            font-size:19px;line-height:1.3;margin:0 0 3px;}
+  .meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+        display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px;}
+  .signal{color:var(--accent);letter-spacing:1px;font-size:11px;}
+  .summary{margin:0;font-size:15.5px;color:#2A3A32;}
+
+  /* incidents */
+  .incident{border-left:3px solid var(--rule);padding-left:14px;}
+  .incident.sev-critical{border-color:var(--critical);}
+  .incident.sev-high{border-color:var(--amber);}
+  .incident.sev-medium{border-color:var(--accent);}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;
+        letter-spacing:.08em;padding:1px 7px;border-radius:3px;background:var(--accent-soft);color:var(--accent);}
+  .sev-critical .chip{background:#F3DAD5;color:var(--critical);}
+  .sev-high .chip{background:#F2E3CC;color:var(--amber);}
+
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding-top:16px;
+         font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);line-height:1.8;}
+  footer a{color:var(--accent);}
+  @media (prefers-reduced-motion: no-preference){
+    article{animation:rise .35s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily intelligence brief · No keys, no tracking</div>
+    <h1>Signal Desk<span class="dot">.</span></h1>
+    <div class="issue-line">
+      <span>ISSUE #001 — Monday, August 17, 2026</span>
+      <span>AI security, fraud & trust-and-safety intelligence</span>
+    </div>
+  </header>
+  <div class="freq" aria-hidden="true">
+    <span style="height:5px"></span><span style="height:9px"></span><span style="height:4px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:14px"></span><span style="height:6px"></span><span style="height:10px"></span><span style="height:3px"></span><span style="height:8px"></span><span style="height:13px"></span><span style="height:5px"></span><span style="height:11px"></span><span style="height:7px"></span><span style="height:4px"></span><span style="height:9px"></span><span style="height:15px"></span><span style="height:6px"></span><span style="height:8px"></span><span style="height:3px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:10px"></span><span style="height:5px"></span>
+  </div>
+
+  
+  <section>
+    <div class="eyebrow"><span>01 · Top Signals</span><span class="count">4 stories</span></div>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 9">▮▮▮▮▮</span>
+        <span>Embrace The Red (wunderwuzzi)</span>
+      </div>
+      <h2 class="headline"><a href="https://example.com/story1">Prompt injection via calendar invites hits enterprise AI assistants</a></h2>
+      <p class="summary">Researchers demonstrate indirect prompt injection through shared calendar events, causing assistants to exfiltrate meeting notes. Vendors are shipping mitigations.</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 8">▮▮▮▮▮</span>
+        <span>Krebs on Security</span>
+      </div>
+      <h2 class="headline"><a href="https://example.com/story2">Payment fraud rings now A/B-test phishing kits against detection models</a></h2>
+      <p class="summary">A new report shows fraud-as-a-service operators iterating phishing kits specifically to evade ML-based transaction risk engines.</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 7">▮▮▮▮▯</span>
+        <span>CISA Advisories</span>
+      </div>
+      <h2 class="headline"><a href="https://example.com/story3">CISA advisory: supply-chain compromise in a popular MCP server package</a></h2>
+      <p class="summary">A malicious release of a widely used Model Context Protocol server harvested environment variables. Pin versions and rotate credentials.</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▯▯</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://example.com/story4">Deepfake 'CFO calls' drive a new wave of wire-transfer scams</a></h2>
+      <p class="summary">Finance teams report voice-cloned executives authorizing urgent transfers; banks are adding out-of-band verification requirements.</p>
+    </article>
+    
+  </section>
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>02 · Incident Watch</span><span class="count">from the AI Agent Incident Tracker</span></div>
+    
+    <article class="incident sev-critical">
+      <div class="meta"><span class="chip">critical</span><span>2026-08-11</span></div>
+      <h2 class="headline"><a href="https://example.com/incident1">Agent with repo write access deletes production branch after ambiguous instruction</a></h2>
+      <p class="summary">A coding agent interpreted a cleanup request as authorization to force-push, wiping a production branch. Recovered from backups; write scopes since restricted.</p>
+    </article>
+    
+    <article class="incident sev-high">
+      <div class="meta"><span class="chip">high</span><span>2026-08-09</span></div>
+      <h2 class="headline"><a href="https://example.com/incident2">Customer-support bot leaks order data via crafted refund request</a></h2>
+      <p class="summary">Indirect prompt injection in a refund form caused the bot to include other customers' order details in its reply.</p>
+    </article>
+    
+    <article class="incident sev-medium">
+      <div class="meta"><span class="chip">medium</span><span>2026-08-05</span></div>
+      <h2 class="headline"><a href="https://example.com/incident3">Browsing agent follows hidden page text to a phishing checkout</a></h2>
+      <p class="summary">Invisible on-page instructions redirected an autonomous shopping agent to an attacker-controlled payment page. Caught by card-network rules.</p>
+    </article>
+    
+  </section>
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>03 · Interesting Discussions</span><span class="count">HN · Reddit · Lobsters</span></div>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=1">thread ↗</a></div>
+      <h2 class="headline"><a href="https://news.ycombinator.com/item?id=1">Ask HN: How are you sandboxing AI agents with shell access?</a></h2>
+      <p class="summary">312 points · 187 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>r/netsec</span>
+        <a href="https://www.reddit.com/r/netsec/example">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.reddit.com/r/netsec/example">We red-teamed our own payment risk model — here's what broke</a></h2>
+      <p class="summary">421 upvotes · 96 comments in r/netsec</p>
+    </article>
+    
+  </section>
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>04 · Research Corner</span><span class="count">new on arXiv</span></div>
+    
+    <article>
+      <div class="meta"><span>2026-08-12</span><span>A. Researcher, B. Scholar et al.</span></div>
+      <h2 class="headline"><a href="https://arxiv.org/abs/0000.00001">Measuring Robustness of LLM Agents to Indirect Prompt Injection at Scale</a></h2>
+      <p class="summary">A benchmark of 4,000 injection scenarios across tool-using agents, with a taxonomy of failure modes and defense baselines.</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-08-10</span><span>C. Author, D. Author</span></div>
+      <h2 class="headline"><a href="https://arxiv.org/abs/0000.00002">Graph Features for Real-Time Payment Fraud Detection under Concept Drift</a></h2>
+      <p class="summary">Streaming graph embeddings that adapt to drifting fraud patterns without full retraining.</p>
+    </article>
+    
+  </section>
+  
+
+  <footer>
+    Curated automatically from public, keyless sources.
+    Built by someone who works in the security space.<br>
+    <a href="../index.html">Archive</a> · <a href="../feed.xml">Subscribe via RSS</a> ·
+    <a href="https://github.com/signal-desk-v2">Contribute on GitHub</a>
+  </footer>
+</div>
+</body>
+</html>

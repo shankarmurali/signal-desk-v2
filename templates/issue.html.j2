@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ cfg.title }} — Issue #{{ issue_no }} · {{ date }}</title>
+<link rel="alternate" type="application/rss+xml" title="{{ cfg.title }}" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1EE; --ink:#14231C; --accent:#1E6E52; --accent-soft:#D8E6DF;
+    --amber:#B4690E; --critical:#A32C1C; --muted:#5B6B62; --rule:#C6D0C9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.55;}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px;}
+  a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;}
+  a:hover{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  /* masthead */
+  header{border-bottom:3px solid var(--ink);padding-bottom:18px;margin-bottom:8px;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+          text-transform:uppercase;color:var(--muted);}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(38px,8vw,58px);line-height:.95;margin:.15em 0 .1em;letter-spacing:-.02em;}
+  h1 .dot{color:var(--accent);}
+  .issue-line{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+              display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* frequency rule under masthead */
+  .freq{display:flex;gap:3px;align-items:flex-end;height:16px;margin:14px 0 34px;}
+  .freq span{width:4px;background:var(--accent);opacity:.75;border-radius:1px;}
+
+  /* sections */
+  section{margin-bottom:46px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
+           letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+           border-bottom:1px solid var(--rule);padding-bottom:7px;margin-bottom:18px;
+           display:flex;justify-content:space-between;}
+  .eyebrow .count{color:var(--muted);}
+
+  article{margin-bottom:22px;}
+  .headline{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+            font-size:19px;line-height:1.3;margin:0 0 3px;}
+  .meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+        display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px;}
+  .signal{color:var(--accent);letter-spacing:1px;font-size:11px;}
+  .summary{margin:0;font-size:15.5px;color:#2A3A32;}
+
+  /* incidents */
+  .incident{border-left:3px solid var(--rule);padding-left:14px;}
+  .incident.sev-critical{border-color:var(--critical);}
+  .incident.sev-high{border-color:var(--amber);}
+  .incident.sev-medium{border-color:var(--accent);}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;
+        letter-spacing:.08em;padding:1px 7px;border-radius:3px;background:var(--accent-soft);color:var(--accent);}
+  .sev-critical .chip{background:#F3DAD5;color:var(--critical);}
+  .sev-high .chip{background:#F2E3CC;color:var(--amber);}
+
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding-top:16px;
+         font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);line-height:1.8;}
+  footer a{color:var(--accent);}
+  @media (prefers-reduced-motion: no-preference){
+    article{animation:rise .35s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily intelligence brief · No keys, no tracking</div>
+    <h1>{{ cfg.title }}<span class="dot">.</span></h1>
+    <div class="issue-line">
+      <span>ISSUE #{{ '%03d' % issue_no }} — {{ display_date }}</span>
+      <span>{{ cfg.tagline }}</span>
+    </div>
+  </header>
+  <div class="freq" aria-hidden="true">
+    {% for h in [5,9,4,12,7,14,6,10,3,8,13,5,11,7,4,9,15,6,8,3,12,7,10,5] %}<span style="height:{{h}}px"></span>{% endfor %}
+  </div>
+
+  {% if sections.top_signals %}
+  <section>
+    <div class="eyebrow"><span>01 · Top Signals</span><span class="count">{{ sections.top_signals|length }} stories</span></div>
+    {% for it in sections.top_signals %}
+    <article>
+      <div class="meta">
+        {% set bars = ((it.score or 1) * 5 / max_score) | round(0, 'ceil') | int %}
+        <span class="signal" title="signal strength {{ it.score }}">{{ '▮' * bars }}{{ '▯' * (5 - bars) }}</span>
+        <span>{{ it.source }}</span>
+      </div>
+      <h2 class="headline"><a href="{{ it.url }}">{{ it.title }}</a></h2>
+      {% if it.summary %}<p class="summary">{{ it.summary }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if sections.incidents %}
+  <section>
+    <div class="eyebrow"><span>02 · Incident Watch</span><span class="count">from the AI Agent Incident Tracker</span></div>
+    {% for inc in sections.incidents %}
+    <article class="incident sev-{{ inc.severity }}">
+      <div class="meta"><span class="chip">{{ inc.severity }}</span><span>{{ inc.date }}</span></div>
+      <h2 class="headline"><a href="{{ inc.url }}">{{ inc.title }}</a></h2>
+      {% if inc.summary %}<p class="summary">{{ inc.summary }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if sections.discussions %}
+  <section>
+    <div class="eyebrow"><span>03 · Interesting Discussions</span><span class="count">HN · Reddit · Lobsters</span></div>
+    {% for it in sections.discussions %}
+    <article>
+      <div class="meta"><span>{{ it.source }}</span>
+        {% if it.discussion_url %}<a href="{{ it.discussion_url }}">thread ↗</a>{% endif %}</div>
+      <h2 class="headline"><a href="{{ it.url }}">{{ it.title }}</a></h2>
+      {% if it.summary %}<p class="summary">{{ it.summary }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if sections.research %}
+  <section>
+    <div class="eyebrow"><span>04 · Research Corner</span><span class="count">new on arXiv</span></div>
+    {% for it in sections.research %}
+    <article>
+      <div class="meta"><span>{{ it.published_str }}</span>{% if it.authors %}<span>{{ it.authors }}</span>{% endif %}</div>
+      <h2 class="headline"><a href="{{ it.url }}">{{ it.title }}</a></h2>
+      {% if it.summary %}<p class="summary">{{ it.summary }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <footer>
+    Curated automatically from public, keyless sources.
+    Built by someone who works in the security space.<br>
+    <a href="../index.html">Archive</a> · <a href="../feed.xml">Subscribe via RSS</a> ·
+    <a href="https://github.com/{{ cfg.site_url.split('.github.io/')[-1] if '.github.io/' in cfg.site_url else '' }}">Contribute on GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
