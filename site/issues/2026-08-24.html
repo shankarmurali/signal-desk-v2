@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Desk — Issue #8 · 2026-08-24</title>
+<link rel="alternate" type="application/rss+xml" title="Signal Desk" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1EE; --ink:#14231C; --accent:#1E6E52; --accent-soft:#D8E6DF;
+    --amber:#B4690E; --critical:#A32C1C; --muted:#5B6B62; --rule:#C6D0C9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.55;}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px;}
+  a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;}
+  a:hover{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  /* masthead */
+  header{border-bottom:3px solid var(--ink);padding-bottom:18px;margin-bottom:8px;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+          text-transform:uppercase;color:var(--muted);}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(38px,8vw,58px);line-height:.95;margin:.15em 0 .1em;letter-spacing:-.02em;}
+  h1 .dot{color:var(--accent);}
+  .issue-line{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+              display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* frequency rule under masthead */
+  .freq{display:flex;gap:3px;align-items:flex-end;height:16px;margin:14px 0 34px;}
+  .freq span{width:4px;background:var(--accent);opacity:.75;border-radius:1px;}
+
+  /* sections */
+  section{margin-bottom:46px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
+           letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+           border-bottom:1px solid var(--rule);padding-bottom:7px;margin-bottom:18px;
+           display:flex;justify-content:space-between;}
+  .eyebrow .count{color:var(--muted);}
+
+  article{margin-bottom:22px;}
+  .headline{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+            font-size:19px;line-height:1.3;margin:0 0 3px;}
+  .meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+        display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px;}
+  .signal{color:var(--accent);letter-spacing:1px;font-size:11px;}
+  .summary{margin:0;font-size:15.5px;color:#2A3A32;}
+
+  /* incidents */
+  .incident{border-left:3px solid var(--rule);padding-left:14px;}
+  .incident.sev-critical{border-color:var(--critical);}
+  .incident.sev-high{border-color:var(--amber);}
+  .incident.sev-medium{border-color:var(--accent);}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;
+        letter-spacing:.08em;padding:1px 7px;border-radius:3px;background:var(--accent-soft);color:var(--accent);}
+  .sev-critical .chip{background:#F3DAD5;color:var(--critical);}
+  .sev-high .chip{background:#F2E3CC;color:var(--amber);}
+
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding-top:16px;
+         font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);line-height:1.8;}
+  footer a{color:var(--accent);}
+  @media (prefers-reduced-motion: no-preference){
+    article{animation:rise .35s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily intelligence brief · No keys, no tracking</div>
+    <h1>Signal Desk<span class="dot">.</span></h1>
+    <div class="issue-line">
+      <span>ISSUE #008 — Monday, August 24, 2026</span>
+      <span>AI security, fraud & trust-and-safety intelligence</span>
+    </div>
+  </header>
+  <div class="freq" aria-hidden="true">
+    <span style="height:5px"></span><span style="height:9px"></span><span style="height:4px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:14px"></span><span style="height:6px"></span><span style="height:10px"></span><span style="height:3px"></span><span style="height:8px"></span><span style="height:13px"></span><span style="height:5px"></span><span style="height:11px"></span><span style="height:7px"></span><span style="height:4px"></span><span style="height:9px"></span><span style="height:15px"></span><span style="height:6px"></span><span style="height:8px"></span><span style="height:3px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:10px"></span><span style="height:5px"></span>
+  </div>
+
+  
+  <section>
+    <div class="eyebrow"><span>01 · Top Signals</span><span class="count">6 stories</span></div>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/">Anthropic’s best AI model struggles to attract users as cheaper tools thrive</a></h2>
+      <p class="summary">Anthropic’s best AI model struggles to attract users as cheaper tools thrive A few interesting numbers in this FT story gathered from "people with knowledge of the matter": Anthropic's "annualized revenue" for July is up to $65bn - it was $47bn in May, and I collected more histo…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Aug/23/drew-breunig/">Quoting Drew Breunig</a></h2>
+      <p class="summary">Prior to Fable, it felt silly to waste too much time improving your coding harness or context strategies. A new model would arrive at the same price (or cheaper!) and paper over most of your problems. But then Fable landed. It was (and still is!) incredible . But the cost was so…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Aug/22/llm/">llm 0.33</a></h2>
+      <p class="summary">Release: llm 0.33 My highlights from this release: Upgraded to the OpenAI Python library 3.x and switched the HTTP client dependency from httpx to httpx2 . #1608 , #1631 I shipped a quick 0.32.1 fix for this yesterday, but this is the more comprehensive fix. llm embed and llm em…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 4">▮▮▮▮▯</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/security/toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play/">ToxicPanda Android malware uses VPN permissions to block Google Play</a></h2>
+      <p class="summary">The ToxicPanda Android malware has evolved with new malicious functionality, expanding its targeting to 349 applications and adding support for 167 remote commands. [...]</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 3">▮▮▮▯▯</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Aug/22/linus-torvalds/">Quoting Linus Torvalds</a></h2>
+      <p class="summary">And this was a debug session from hell, enormously helped by an AI doing much of the grunt-work. I'd like to call it my tireless helper, but the AI several times stated flat out that this was impossible and unsolvable and that we should just write a report about it. I suspect th…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 3">▮▮▮▯▯</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Aug/22/more-than-just-code-review/">More than just code review</a></h2>
+      <p class="summary">The key skill required to make productive use of coding agents is being able to confidently instruct them on how to make changes and then confidently verify that those changes have been applied in the correct way. Sometimes this involves reviewing every line of code they have wr…</p>
+    </article>
+    
+  </section>
+  
+
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>03 · Interesting Discussions</span><span class="count">HN · Reddit · Lobsters</span></div>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49394827">thread ↗</a></div>
+      <h2 class="headline"><a href="https://ozbrain.com">Show HN: OzBrain, a shared brain for knowledge between agents and your team</a></h2>
+      <p class="summary">85 points · 50 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/u7v2sn/then_men_with_guns_tell_you_do_it_anyway">thread ↗</a></div>
+      <h2 class="headline"><a href="https://shkspr.mobi/blog/2026/08/and-then-the-men-with-guns-tell-you-to-do-it-anyway/">And then the men with guns tell you to do it anyway</a></h2>
+      <p class="summary">79 points · 17 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49390739">thread ↗</a></div>
+      <h2 class="headline"><a href="https://github.com/proliferate-ai/proliferate">Show HN: Proliferate- open-source, self-hostable Codex for any coding agent</a></h2>
+      <p class="summary">45 points · 16 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/vni2id/critical_coldcard_flaw_what_happened_who">thread ↗</a></div>
+      <h2 class="headline"><a href="https://wizardsardine.com/blog/coldcard-rng-vulnerability/">Critical Coldcard flaw: what happened, who is affected, and what to do</a></h2>
+      <p class="summary">1 points · 0 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/xiwynb/tmp_0ut_volume_5">thread ↗</a></div>
+      <h2 class="headline"><a href="https://tmpout.sh/5/">tmp.0ut volume 5</a></h2>
+      <p class="summary">7 points · 3 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/2mvgzt/injectionbunny_ntfs3_suid_injection_for">thread ↗</a></div>
+      <h2 class="headline"><a href="https://lore.kernel.org/ntfs3/CAGBKPgPiXyKWtjgYSACnugmG1XPs=mPg-Zu-xQziUZ1k921+qA@mail.gmail.com/T/#mc251816dfcb7d4dcbf07368f0d288dbfb1b8e1c9">InjectionBunny, a NTFS3 SUID injection for privilege escalation</a></h2>
+      <p class="summary">2 points · 2 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/r77bda/stalking_wily_hacker_40_years_later">thread ↗</a></div>
+      <h2 class="headline"><a href="https://youtu.be/656058JxTM0">Stalking the Wily Hacker: 40 years later</a></h2>
+      <p class="summary">3 points · 0 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/ebpnyk/ai_chip_architectures">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.jepeake.com/ai-chip-architectures">AI Chip Architectures</a></h2>
+      <p class="summary">1 points · 0 comments on Lobsters</p>
+    </article>
+    
+  </section>
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>04 · Research Corner</span><span class="count">new on arXiv</span></div>
+    
+    <article>
+      <div class="meta"><span>2026-08-21</span><span>Arulnidhi Karunanidhi</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2608.21230v1">Utility Under Attack: Agent Memory Poisoning and the Limits of Content Screening and Provenance Ranking</a></h2>
+      <p class="summary">Persistent memory makes false information durable: once a false statement is stored, it can be retrieved into future sessions that match it. We measure the cost of this failure mode using plainly worded false assertions generated in a single pass, with no instruction, trigger, or retriever optimiza…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-08-21</span><span>Bohao Liao, Jingchao Wang, Qipeng Song et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2608.21126v1">TraceGrant: A Contract-Governed Security Framework for the Task-Effect Lifecycle of Networked LLM Agents</a></h2>
+      <p class="summary">Networked large language model (LLM) agents retrieve information from email, cloud storage, calendars, transaction platforms, and Web services to complete multistep tasks that produce persistent external effects. The same content needed for legitimate execution may also contain indirect prompt inje…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-08-21</span><span>Shiva Shrestha, Kazi Shaharair Sharif, Zongxing Xie et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2608.21172v1">Thermo-FL: Thermal-Aware Robust Federated Fine-Tuning of Large Language Models for Edge AI</a></h2>
+      <p class="summary">Federated fine-tuning enables large language models to adapt on edge devices without centralizing private data, but practical deployments must address hardware instability and adversarial update corruption together. Thermally constrained clients may throttle, slow local training, or delay synchrono…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-08-21</span><span>Balkrishna Giri, Md Toufique Hasan, Jussi Rasku et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2608.21095v1">Trustworthy RAG: An Evaluation Agent for Detecting Misinformation and Knowledge Poisoning in Generative AI Systems</a></h2>
+      <p class="summary">Retrieval-Augmented Generation (RAG) grounds Large Language Model (LLM) outputs in external knowledge, but RAG systems usually trust whatever they retrieve, creating a Security-Reliability Gap: high semantic relevance does not guarantee factual truth. Adversaries exploit this through knowledge pois…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-08-21</span><span>Angel Mary John, Vipin Kumar Singh, Jerrin Thomas Panachakel</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2608.21089v1">Can Legal AI Know When It Is Wrong? And Do Students Know When It Is?</a></h2>
+      <p class="summary">Integrating Large Language Models (LLMs) into the Indian judiciary promises access to justice but introduces severe risks. We identify the 'inertia of confidence'--an overconfidence phenomenon analogous to the Dunning-Kruger effect where LLMs provide incorrect legal verdicts with near-maximum confi…</p>
+    </article>
+    
+  </section>
+  
+
+  <footer>
+    Curated automatically from public, keyless sources.
+    Built by someone who works in the security space.<br>
+    <a href="../index.html">Archive</a> · <a href="../feed.xml">Subscribe via RSS</a> ·
+    <a href="https://github.com/signal-desk-v2">Contribute on GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
