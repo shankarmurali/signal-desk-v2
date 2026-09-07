@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Desk — Issue #22 · 2026-09-07</title>
+<link rel="alternate" type="application/rss+xml" title="Signal Desk" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1EE; --ink:#14231C; --accent:#1E6E52; --accent-soft:#D8E6DF;
+    --amber:#B4690E; --critical:#A32C1C; --muted:#5B6B62; --rule:#C6D0C9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.55;}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px;}
+  a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;}
+  a:hover{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  /* masthead */
+  header{border-bottom:3px solid var(--ink);padding-bottom:18px;margin-bottom:8px;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+          text-transform:uppercase;color:var(--muted);}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(38px,8vw,58px);line-height:.95;margin:.15em 0 .1em;letter-spacing:-.02em;}
+  h1 .dot{color:var(--accent);}
+  .issue-line{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+              display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* frequency rule under masthead */
+  .freq{display:flex;gap:3px;align-items:flex-end;height:16px;margin:14px 0 34px;}
+  .freq span{width:4px;background:var(--accent);opacity:.75;border-radius:1px;}
+
+  /* sections */
+  section{margin-bottom:46px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
+           letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+           border-bottom:1px solid var(--rule);padding-bottom:7px;margin-bottom:18px;
+           display:flex;justify-content:space-between;}
+  .eyebrow .count{color:var(--muted);}
+
+  article{margin-bottom:22px;}
+  .headline{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+            font-size:19px;line-height:1.3;margin:0 0 3px;}
+  .meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+        display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px;}
+  .signal{color:var(--accent);letter-spacing:1px;font-size:11px;}
+  .summary{margin:0;font-size:15.5px;color:#2A3A32;}
+
+  /* incidents */
+  .incident{border-left:3px solid var(--rule);padding-left:14px;}
+  .incident.sev-critical{border-color:var(--critical);}
+  .incident.sev-high{border-color:var(--amber);}
+  .incident.sev-medium{border-color:var(--accent);}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;
+        letter-spacing:.08em;padding:1px 7px;border-radius:3px;background:var(--accent-soft);color:var(--accent);}
+  .sev-critical .chip{background:#F3DAD5;color:var(--critical);}
+  .sev-high .chip{background:#F2E3CC;color:var(--amber);}
+
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding-top:16px;
+         font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);line-height:1.8;}
+  footer a{color:var(--accent);}
+  @media (prefers-reduced-motion: no-preference){
+    article{animation:rise .35s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily intelligence brief · No keys, no tracking</div>
+    <h1>Signal Desk<span class="dot">.</span></h1>
+    <div class="issue-line">
+      <span>ISSUE #022 — Monday, September 7, 2026</span>
+      <span>AI security, fraud & trust-and-safety intelligence</span>
+    </div>
+  </header>
+  <div class="freq" aria-hidden="true">
+    <span style="height:5px"></span><span style="height:9px"></span><span style="height:4px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:14px"></span><span style="height:6px"></span><span style="height:10px"></span><span style="height:3px"></span><span style="height:8px"></span><span style="height:13px"></span><span style="height:5px"></span><span style="height:11px"></span><span style="height:7px"></span><span style="height:4px"></span><span style="height:9px"></span><span style="height:15px"></span><span style="height:6px"></span><span style="height:8px"></span><span style="height:3px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:10px"></span><span style="height:5px"></span>
+  </div>
+
+  
+  <section>
+    <div class="eyebrow"><span>01 · Top Signals</span><span class="count">8 stories</span></div>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/security/attackers-conceal-phishing-lures-using-invisible-unicode-characters/">Attackers conceal phishing lures using invisible Unicode characters</a></h2>
+      <p class="summary">Threat actors have adopted the ASCII smuggling technique in phishing campaigns, using invisible Unicode characters to evade email security filters. [...]</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Sep/6/the-purpose-of-dns-is-to-spread-scams/">The purpose of DNS is to spread scams</a></h2>
+      <p class="summary">The purpose of DNS is to spread scams Terence Eden shares some daunting statistics in support of his take that "the Domain Name System's purpose seems to be a vector for criminals to run scams on people at a terrifyingly high rate". On this Interisle report ( via Andrew Campling…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/chatgpt-astra-is-now-rolling-out-to-20-plus-subscription/">ChatGPT Astra is now rolling out to $20 Plus subscription</a></h2>
+      <p class="summary">OpenAI is now rolling out ChatGPT Astra, its most powerful model to date, to those with a $20 Plus subscription, but there's no word on when free users will get access.. [...]</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/">Research acceleration: The view inside OpenAI</a></h2>
+      <p class="summary">Research acceleration: The view inside OpenAI Apparently today is RSI day at OpenAI, for Recursive Self-Improvement - I think it's their new AGI. Both this piece and the new essay An Alien Mind (by Chief Scientist Jakub Pachocki) talk about it, and this one doesn't even bother t…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 4">▮▮▮▮▯</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html">Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentication</a></h2>
+      <p class="summary">Attackers are exploiting MikroTik routers with their Secure Shell (SSH) remote-access service, which is reachable from the internet, to gain full administrative control without authentication, according to CERT Polska's attack warning, published on September 5. Successful attack…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 4">▮▮▮▮▯</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html">Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner</a></h2>
+      <p class="summary">Elastic Security Labs has documented four previously unreported programs associated with REVSTEALER, an emerging Windows information stealer, that remain on an infected machine after the stealer deletes itself. One of them switches off Windows Update and Microsoft Defender befor…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 4">▮▮▮▮▯</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/">There's No Limit to How Bad Code Can Get</a></h2>
+      <p class="summary">My comment on There's No Limit to How Bad Code Can Get — Lobste.rs. [In reply to a comment about burning it down to start from scratch when technical debt becomes overwhelming] In my experience it's so rare for that to work. You announce the old thing is irrecoverably drowning i…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 4">▮▮▮▮▯</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Sep/6/zach-kehs/">Quoting Zach Kehs</a></h2>
+      <p class="summary">If you continue to add floors and rooms to a building forever, it will collapse. Software faces no such constraint. The code can always get worse. There can always be a new layer of indirection or a reduction in performance. — Zach Kehs , There's No Limit to How Bad Code Can Get…</p>
+    </article>
+    
+  </section>
+  
+
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>03 · Interesting Discussions</span><span class="count">HN · Reddit · Lobsters</span></div>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49562744">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/">OpenAI agents hijacked German website in previously undisclosed AI breakout</a></h2>
+      <p class="summary">95 points · 2 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49581240">thread ↗</a></div>
+      <h2 class="headline"><a href="https://github.com/okf-memory/okf-agent-memory">OKF Agent Memory – Git-native persistent memory for AI coding agents</a></h2>
+      <p class="summary">76 points · 23 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/jato3y/llms_self_referentiality">thread ↗</a></div>
+      <h2 class="headline"><a href="https://scottaaronson.blog/?p=10046">LLMs and self-referentiality</a></h2>
+      <p class="summary">3 points · 4 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/p5w5j6/trusting_trust_attack_against_entire">thread ↗</a></div>
+      <h2 class="headline"><a href="https://arxiv.org/abs/2607.24888">Trusting-Trust Attack against an Entire Linux Distribution (via the strip utility)</a></h2>
+      <p class="summary">67 points · 13 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/uu3hhz/have_frontier_labs_mixed_up_ai_safety">thread ↗</a></div>
+      <h2 class="headline"><a href="https://martinalderson.com/posts/ai-safety-vs-security/">Have the frontier labs mixed up AI safety and security?</a></h2>
+      <p class="summary">3 points · 0 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/ifyeuo/hillingar_mirageos_unikernels_on_nixos">thread ↗</a></div>
+      <h2 class="headline"><a href="https://ryan.freumh.org/hillingar.html">Hillingar - MirageOS Unikernels on NixOS</a></h2>
+      <p class="summary">4 points · 0 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/kvfua1/stop_telling_people_not_click_links">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.forbes.com/councils/forbestechcouncil/2026/08/26/stop-telling-people-not-to-click-links/">Stop Telling People Not To Click Links</a></h2>
+      <p class="summary">5 points · 2 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/hveyuq/upcoming_c_tor_security_release_0_4_9_12">thread ↗</a></div>
+      <h2 class="headline"><a href="https://forum.torproject.org/t/tor-dev-upcoming-c-tor-security-release-0-4-9-12/22075">Upcoming C-tor security release - 0.4.9.12</a></h2>
+      <p class="summary">2 points · 1 comments on Lobsters</p>
+    </article>
+    
+  </section>
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>04 · Research Corner</span><span class="count">new on arXiv</span></div>
+    
+    <article>
+      <div class="meta"><span>2026-09-04</span><span>Lisa Bouger, Yannick Teglia, Philippe Loubet Moundi</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2609.05074v1">Influence Score and Transformers interpretability: Measure of the Effective Impact of Attention Heads at inference time</a></h2>
+      <p class="summary">We propose an influence score to quantify the contribution of attention heads to classification decisions in Transformer-based models designed for prompt injection detection. The score combines directional influence on the logits with structural contribution within the residual stream, enabling a m…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-09-04</span><span>Ole Becker, Tobias Jongen, Philip Kolbe et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2609.05169v1">Hatebench in the era of safer LLMs</a></h2>
+      <p class="summary">As Large Language Models (LLMs) lower the barrier for au- tomated content generation, the potential for producing hate speech poses a significant challenge for digital safety. This paper presents a reproducibility study of the HateBench paper by Shen et al., investigating whether existing hate spee…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-09-04</span><span>Qi Zhang, Yanlin Chen, Wenchao Xiao</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2609.04871v1">AutoLR: Automating the Path from Research to Launch Review in Industrial Recommender Systems</a></h2>
+      <p class="summary">Improving an industrial recommender is an iterative research-and-engineering process rather than a direct path from idea to deployment. In \textbf{DASHEN, NetEase's gaming-community app}, algorithm engineers typically identify promising directions from research papers, technical reports, and prior …</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-09-03</span><span>Sizhe Chen, Yu-Lin Tsai, Ivan Evtimov et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2609.04533v1">Repeat-After-Me: Black-Box Adaptive Visual Prompt Injection</a></h2>
+      <p class="summary">Prompt injection is widely recognized as a major security threat to AI agents that interact with untrusted external data, such as websites, documents, and emails. Prior work has shown that, in the text domain, black-box prompt injection can achieve near-perfect attack success rates (ASRs). In the i…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-09-03</span><span>Duong M. Nguyen, Joon Sik Kim, Blazej Manczak et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2609.04495v1">Rethinking Indirect Prompt Injection as a Test-Time Search Problem</a></h2>
+      <p class="summary">We formulate indirect prompt injection as a test-time search over a task-dependent attack surface induced by the environment, user task, and injection task. To operationalize this formulation, we introduce an agentic attacker with a dedicated search harness that performs environment reconnaissance,…</p>
+    </article>
+    
+  </section>
+  
+
+  <footer>
+    Curated automatically from public, keyless sources.
+    Built by someone who works in the security space.<br>
+    <a href="../index.html">Archive</a> · <a href="../feed.xml">Subscribe via RSS</a> ·
+    <a href="https://github.com/signal-desk-v2">Contribute on GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
