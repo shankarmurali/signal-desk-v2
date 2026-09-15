@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Desk — Issue #30 · 2026-09-15</title>
+<link rel="alternate" type="application/rss+xml" title="Signal Desk" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1EE; --ink:#14231C; --accent:#1E6E52; --accent-soft:#D8E6DF;
+    --amber:#B4690E; --critical:#A32C1C; --muted:#5B6B62; --rule:#C6D0C9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.55;}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px;}
+  a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;}
+  a:hover{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  /* masthead */
+  header{border-bottom:3px solid var(--ink);padding-bottom:18px;margin-bottom:8px;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+          text-transform:uppercase;color:var(--muted);}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(38px,8vw,58px);line-height:.95;margin:.15em 0 .1em;letter-spacing:-.02em;}
+  h1 .dot{color:var(--accent);}
+  .issue-line{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+              display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* frequency rule under masthead */
+  .freq{display:flex;gap:3px;align-items:flex-end;height:16px;margin:14px 0 34px;}
+  .freq span{width:4px;background:var(--accent);opacity:.75;border-radius:1px;}
+
+  /* sections */
+  section{margin-bottom:46px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
+           letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+           border-bottom:1px solid var(--rule);padding-bottom:7px;margin-bottom:18px;
+           display:flex;justify-content:space-between;}
+  .eyebrow .count{color:var(--muted);}
+
+  article{margin-bottom:22px;}
+  .headline{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+            font-size:19px;line-height:1.3;margin:0 0 3px;}
+  .meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+        display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px;}
+  .signal{color:var(--accent);letter-spacing:1px;font-size:11px;}
+  .summary{margin:0;font-size:15.5px;color:#2A3A32;}
+
+  /* incidents */
+  .incident{border-left:3px solid var(--rule);padding-left:14px;}
+  .incident.sev-critical{border-color:var(--critical);}
+  .incident.sev-high{border-color:var(--amber);}
+  .incident.sev-medium{border-color:var(--accent);}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;
+        letter-spacing:.08em;padding:1px 7px;border-radius:3px;background:var(--accent-soft);color:var(--accent);}
+  .sev-critical .chip{background:#F3DAD5;color:var(--critical);}
+  .sev-high .chip{background:#F2E3CC;color:var(--amber);}
+
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding-top:16px;
+         font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);line-height:1.8;}
+  footer a{color:var(--accent);}
+  @media (prefers-reduced-motion: no-preference){
+    article{animation:rise .35s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily intelligence brief · No keys, no tracking</div>
+    <h1>Signal Desk<span class="dot">.</span></h1>
+    <div class="issue-line">
+      <span>ISSUE #030 — Tuesday, September 15, 2026</span>
+      <span>AI security, fraud & trust-and-safety intelligence</span>
+    </div>
+  </header>
+  <div class="freq" aria-hidden="true">
+    <span style="height:5px"></span><span style="height:9px"></span><span style="height:4px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:14px"></span><span style="height:6px"></span><span style="height:10px"></span><span style="height:3px"></span><span style="height:8px"></span><span style="height:13px"></span><span style="height:5px"></span><span style="height:11px"></span><span style="height:7px"></span><span style="height:4px"></span><span style="height:9px"></span><span style="height:15px"></span><span style="height:6px"></span><span style="height:8px"></span><span style="height:3px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:10px"></span><span style="height:5px"></span>
+  </div>
+
+  
+  <section>
+    <div class="eyebrow"><span>01 · Top Signals</span><span class="count">8 stories</span></div>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>Schneier on Security</span>
+      </div>
+      <h2 class="headline"><a href="https://www.schneier.com/blog/archives/2026/09/upcoming-speaking-engagements-60.html">Upcoming Speaking Engagements</a></h2>
+      <p class="summary">This is a current list of where and when I am scheduled to speak: I’m speaking online (via Zoom) at a League of Women Voters event on Tuesday, September 22, 2026 at 5 PM ET. I’m speaking at CanSecWest 2026 in Vancouver, Canada. The conference runs September 30–October 1, 2026; t…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/09/weekly-recap-rogue-ai-agents-wechat.html">⚡ Weekly Recap: Rogue AI Agents, WeChat Worm, PaperCut Attacks, AI Espionage, and Rootkits</a></h2>
+      <p class="summary">AI keeps showing up in the wrong places. Attackers are using it to speed up exploits, test defenses, and automate more of the job. Some models are also crossing lines on their own. That is not a great combination. The rest of the week is more familiar: old bugs still working, fr…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>Schneier on Security</span>
+      </div>
+      <h2 class="headline"><a href="https://www.schneier.com/blog/archives/2026/09/using-ai-for-weapons-development.html">Using AI for Weapons Development</a></h2>
+      <p class="summary">Last week, Anthropic released a long and detailed document describing current misuses of their Claude models. I’m still reading it, but I wanted to flag this: We identified a cell of threat actors based in northern Yemen running three weapons development programs: a guided rocke…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>Schneier on Security</span>
+      </div>
+      <h2 class="headline"><a href="https://www.schneier.com/blog/archives/2026/09/microsofts-patching.html">Microsoft’s Patching</a></h2>
+      <p class="summary">Once a month, Microsoft pushes a security update to all Windows users. Tomorrow’s is a new record : Microsoft’s patch for September is a doozy, with a record number of roughly 972 vulnerabilities fixed and 112 of them meeting the high critical-severity threshold. It was only two…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-windows-updates-to-fix-rds-failures/">Microsoft releases emergency Windows updates to fix RDS failures</a></h2>
+      <p class="summary">Microsoft has released emergency out-of-band Windows updates to fix Remote Desktop Services failures caused by this month's security updates, along with Hyper-V and USB audio problems on some Windows versions. [...]</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/">Japan's Digital Agency says VPN flaw exposed 246,000 personnel records</a></h2>
+      <p class="summary">Japan's Digital Agency has discovered a data breach that may have exposed around 246,000 record rows containing personal information of government employees. [...]</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/security/homebrew-700-gets-built-in-gui-better-security-controls/">Homebrew 7.0.0 gets built-in GUI, better security controls</a></h2>
+      <p class="summary">Homebrew package manager version 7.0.0 has been released with a built-in vulnerability scanner, stronger security controls, and the full release of its native BrewUI graphical interface. [...]</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▮</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/security/twitch-extension-with-30k-installs-exposes-users-oauth-tokens/">Twitch extension with 30K installs exposes users’ OAuth tokens</a></h2>
+      <p class="summary">A browser extension called Twitch Enhanced Viewer | JeetBot, available in the official Chrome and Firefox stores, sends users' Twitch OAuth session tokens to a commercial bot service. [...]</p>
+    </article>
+    
+  </section>
+  
+
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>03 · Interesting Discussions</span><span class="count">HN · Reddit · Lobsters</span></div>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49678969">thread ↗</a></div>
+      <h2 class="headline"><a href="https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating">Why are AI agents lying, cheating and coordinating?</a></h2>
+      <p class="summary">648 points · 684 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49671159">thread ↗</a></div>
+      <h2 class="headline"><a href="https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/">The worst spam emails: iLands AI agent hustle</a></h2>
+      <p class="summary">124 points · 56 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/wajtsa/openai_agents_carried_out_undisclosed">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.rubyhack.ai/">OpenAI agents carried out an undisclosed attack on RubyGems</a></h2>
+      <p class="summary">123 points · 51 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49678435">thread ↗</a></div>
+      <h2 class="headline"><a href="https://agentsdock.net/">AgentsDock: An IDE designed for agentic AI research</a></h2>
+      <p class="summary">81 points · 33 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/8t1ddm/linux_zoom_client_proactively_reads_x11">thread ↗</a></div>
+      <h2 class="headline"><a href="https://hachyderm.io/@simontatham/117201594980991062">Linux Zoom Client Proactively Reads X11 Clipboard</a></h2>
+      <p class="summary">70 points · 37 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49679685">thread ↗</a></div>
+      <h2 class="headline"><a href="https://venturebeat.com/security/anthropic-ceo-says-ai-swarm-could-take-over-the-entire-internet-in-6-12-months-commits-to-ai-slowdown-plan">Anthropic CEO says AI swarm could 'take over the Internet' in 6-12 months</a></h2>
+      <p class="summary">47 points · 33 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/wobjnw/testing_race_conditions_with_memory">thread ↗</a></div>
+      <h2 class="headline"><a href="https://projectzero.google/2026/09/maccconc-race-condition.html">Testing race conditions with memory access tracing and stack-based delay injection</a></h2>
+      <p class="summary">3 points · 0 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/fcttpk/gpg_fail_aftermath_on_responsible">thread ↗</a></div>
+      <h2 class="headline"><a href="https://media.ccc.de/v/2026-728-the-gpg-fail-aftermath-on-responsible-disclosure-gpg-and-the-state-of-security-in-2026">The gpg.fail aftermath: On responsible disclosure, GPG, and the state of security in 2026 [32:37]</a></h2>
+      <p class="summary">30 points · 11 comments on Lobsters</p>
+    </article>
+    
+  </section>
+  
+
+  
+
+  <footer>
+    Curated automatically from public, keyless sources.
+    Built by someone who works in the security space.<br>
+    <a href="../index.html">Archive</a> · <a href="../feed.xml">Subscribe via RSS</a> ·
+    <a href="https://github.com/signal-desk-v2">Contribute on GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
