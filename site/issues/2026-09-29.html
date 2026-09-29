@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Desk — Issue #44 · 2026-09-29</title>
+<link rel="alternate" type="application/rss+xml" title="Signal Desk" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1EE; --ink:#14231C; --accent:#1E6E52; --accent-soft:#D8E6DF;
+    --amber:#B4690E; --critical:#A32C1C; --muted:#5B6B62; --rule:#C6D0C9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.55;}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px;}
+  a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;}
+  a:hover{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  /* masthead */
+  header{border-bottom:3px solid var(--ink);padding-bottom:18px;margin-bottom:8px;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+          text-transform:uppercase;color:var(--muted);}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(38px,8vw,58px);line-height:.95;margin:.15em 0 .1em;letter-spacing:-.02em;}
+  h1 .dot{color:var(--accent);}
+  .issue-line{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+              display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* frequency rule under masthead */
+  .freq{display:flex;gap:3px;align-items:flex-end;height:16px;margin:14px 0 34px;}
+  .freq span{width:4px;background:var(--accent);opacity:.75;border-radius:1px;}
+
+  /* sections */
+  section{margin-bottom:46px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
+           letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+           border-bottom:1px solid var(--rule);padding-bottom:7px;margin-bottom:18px;
+           display:flex;justify-content:space-between;}
+  .eyebrow .count{color:var(--muted);}
+
+  article{margin-bottom:22px;}
+  .headline{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+            font-size:19px;line-height:1.3;margin:0 0 3px;}
+  .meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+        display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px;}
+  .signal{color:var(--accent);letter-spacing:1px;font-size:11px;}
+  .summary{margin:0;font-size:15.5px;color:#2A3A32;}
+
+  /* incidents */
+  .incident{border-left:3px solid var(--rule);padding-left:14px;}
+  .incident.sev-critical{border-color:var(--critical);}
+  .incident.sev-high{border-color:var(--amber);}
+  .incident.sev-medium{border-color:var(--accent);}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;
+        letter-spacing:.08em;padding:1px 7px;border-radius:3px;background:var(--accent-soft);color:var(--accent);}
+  .sev-critical .chip{background:#F3DAD5;color:var(--critical);}
+  .sev-high .chip{background:#F2E3CC;color:var(--amber);}
+
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding-top:16px;
+         font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);line-height:1.8;}
+  footer a{color:var(--accent);}
+  @media (prefers-reduced-motion: no-preference){
+    article{animation:rise .35s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily intelligence brief · No keys, no tracking</div>
+    <h1>Signal Desk<span class="dot">.</span></h1>
+    <div class="issue-line">
+      <span>ISSUE #044 — Tuesday, September 29, 2026</span>
+      <span>AI security, fraud & trust-and-safety intelligence</span>
+    </div>
+  </header>
+  <div class="freq" aria-hidden="true">
+    <span style="height:5px"></span><span style="height:9px"></span><span style="height:4px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:14px"></span><span style="height:6px"></span><span style="height:10px"></span><span style="height:3px"></span><span style="height:8px"></span><span style="height:13px"></span><span style="height:5px"></span><span style="height:11px"></span><span style="height:7px"></span><span style="height:4px"></span><span style="height:9px"></span><span style="height:15px"></span><span style="height:6px"></span><span style="height:8px"></span><span style="height:3px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:10px"></span><span style="height:5px"></span>
+  </div>
+
+  
+  <section>
+    <div class="eyebrow"><span>01 · Top Signals</span><span class="count">8 stories</span></div>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 7">▮▮▮▮▮</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/09/official-mcp-python-sdk-flaw-can-let.html">Official MCP Python SDK Flaw Can Let Malicious Servers Steal OAuth Credentials</a></h2>
+      <p class="summary">A malicious MCP server could trick an application built on the official MCP Python SDK into handing over the OAuth credentials it uses to log in to a real service, the SDK's maintainers said in a security advisory. Affected versions sent the client secret, the authorization code…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/09/iam-for-ai-agent.html">IAM for AI agents: A Practical Enterprise Framework</a></h2>
+      <p class="summary">What is IAM for AI agents? AI agents authenticate, invoke tools, and act across enterprise systems with delegated authority. IAM for AI Agents is the identity-control architecture that governs those actors. This guide covers the limits of conventional provisioning, the component…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/09/weekly-recap-387m-crypto-hack-citrix.html">⚡ Weekly Recap: $387M Crypto Hack, Citrix Exploits, AI Agents Go Off-Script, and More Threats</a></h2>
+      <p class="summary">A domain used as harmless placeholder text showed up in roughly 1,700 repositories. Then somebody registered it and started serving malicious lures. That is the kind of week this was: forgotten assumptions turning into live attack surface. Elsewhere, weak service accounts, old b…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/09/webinar-how-to-govern-ai-agents-reduce.html">Webinar: How to Govern AI Agents, Reduce Excessive Access, and Control Shadow AI</a></h2>
+      <p class="summary">AI agents are moving into production faster than security teams can govern them. They are connecting to apps, handling data, calling APIs, and acting across business systems—often without the same controls applied to human users. According to Okta’s Global CISO Insights 2026 rep…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html">Carbonato Botnet Compromises Docker Hosts to Deploy Telegram-Controlled Hermes AI Agent</a></h2>
+      <p class="summary">Cybersecurity researchers have disclosed details of a new botnet malware called Carbonato that's targeting exposed Docker daemons to deploy an open-source artificial intelligence (AI) agent framework called Hermes Agent. "The implant installs the framework unchanged, then overwr…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/security/80-000-plus-organizations-had-ai-logins-stolen-from-shadow-ai-to-llmjacking/">80,000+ Organizations Had AI Logins Stolen: From Shadow AI to LLMjacking</a></h2>
+      <p class="summary">Infostealer logs exposed AI account credentials and sessions tied to more than 80,000 corporate domains, creating risks ranging from stolen conversations to LLMjacking. SOCRadar examines the growing market for stolen AI logins and how organizations can identify their exposure. […</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>Krebs on Security</span>
+      </div>
+      <h2 class="headline"><a href="https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/">Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation</a></h2>
+      <p class="summary">Authorities in the Netherlands have arrested a 23-year-old convicted cybercriminal on suspicion of aiding in data thefts and extortions by the prolific hacker group ShinyHunters. In the days immediately following the suspect's arrest, remaining ShinyHunters members dramatically …</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>Schneier on Security</span>
+      </div>
+      <h2 class="headline"><a href="https://www.schneier.com/blog/archives/2026/09/new-attack-against-rsa.html">New Attack Against RSA</a></h2>
+      <p class="summary">ArsTechnica is reporting on a “new” attack against RSA, one that bypasses factoring. First, this attack isn’t new. The original research is from 2007 . What is new is the implementation. Second, it is a forgery attack. It allows an attacker to forge digital signatures. It does n…</p>
+    </article>
+    
+  </section>
+  
+
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>03 · Interesting Discussions</span><span class="count">HN · Reddit · Lobsters</span></div>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49879883">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.cnbc.com/2026/09/28/nvidia-releases.html">Nvidia wants to put a watchdog chip next to every AI agent</a></h2>
+      <p class="summary">155 points · 182 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49868083">thread ↗</a></div>
+      <h2 class="headline"><a href="https://eoinhiggins.substack.com/p/there-are-no-rogue-ai-agents">There are no "rogue" AI agents</a></h2>
+      <p class="summary">391 points · 268 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49856149">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.lasso.security/blog/the-provenance-tax-understanding-the-impact-of-llm-watermarking-on-ai-agent-behavior">Understanding the Impact of LLM Watermarking on AI Agent Behavior</a></h2>
+      <p class="summary">58 points · 72 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49879401">thread ↗</a></div>
+      <h2 class="headline"><a href="https://hn.watch/">Show HN: HN.watch – Videos of all Hacker News posts</a></h2>
+      <p class="summary">156 points · 89 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49867775">thread ↗</a></div>
+      <h2 class="headline"><a href="https://tinyaiarena.com/">Show HN: TinyAIArena watch AI agents battle it out</a></h2>
+      <p class="summary">117 points · 45 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=49868202">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.theguardian.com/technology/2026/sep/27/openai-halts-training-of-latest-models-as-reports-mount-of-ai-agents-going-rogue">OpenAI halts training of latest models as reports mount of AI agents going rogue</a></h2>
+      <p class="summary">58 points · 118 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/sxlf4a/goodbye_google">thread ↗</a></div>
+      <h2 class="headline"><a href="https://robert.ocallahan.org/2026/09/goodbye-google.html">Goodbye Google</a></h2>
+      <p class="summary">107 points · 31 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/jbnmj9/chatgpt_now_knows_what_you_do_on_other">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/">ChatGPT now knows what you do on other websites via ad collector</a></h2>
+      <p class="summary">60 points · 7 comments on Lobsters</p>
+    </article>
+    
+  </section>
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>04 · Research Corner</span><span class="count">new on arXiv</span></div>
+    
+    <article>
+      <div class="meta"><span>2026-09-28</span><span>Bravish Ghosh</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2609.35659v1">Tracekit: Tamper-Evident Intent-Reasoning-Action Auditing for Autonomous Coding Agents</a></h2>
+      <p class="summary">Autonomous coding agents read untrusted files, run shell commands and spawn sub-agents with little supervision, yet their record is usually an editable log. We present Tracekit, an open-source, dependency-free system that captures three channels for every agent session: what the human asked (intent…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-09-28</span><span>Rohit Saxena, Utkarsh Upadhyay</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2609.34572v1">Nudgeability: Reasoning Models Follow Confidence Signals Without Tracking Their Own Competence</a></h2>
+      <p class="summary">Reasoning language models that can call tools must decide during inference whether to answer unaided or delegate. Any self-reflection mechanism for this must answer three questions: where the reflective signal comes from (verbal reports, output distributions, hidden states, a separate predictor), h…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-09-28</span><span>Xiao Yang, Yangchen Ou, Yuhan Gao et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2609.34463v1">CoDeL: Co-Evolutionary Defense against Indirect Prompt Injection in LLM-based Agents</a></h2>
+      <p class="summary">Large language model (LLM)-based agents increasingly rely on external tools and content, exposing them to indirect prompt injection (IPI). This threat has motivated a wide range of defenses, among which training-based defenses are often regarded as most reliable. However, existing training-based de…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-09-28</span><span>Anmol Pandey, Aditya Jain, Liang Chen et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2609.34245v1">Certified Multi-Source Integrity for Structured Agent Actions</a></h2>
+      <p class="summary">LLM agents increasingly take privileged, often irreversible structured actions, such as paying an invoice. They assemble each action from action-critical fields in documents and tool outputs that an adversary can corrupt, and indirect prompt injection can drive the model itself to extract attacker-…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-09-28</span><span>Sidharth Pulipaka, Ansh Sharma, Stanislau Hlebik et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2609.35576v1">Share-Borne AI Virus: Memory-Hopping Attacks Across LLM Agents</a></h2>
+      <p class="summary">Large language models are increasingly deployed as stateful assistants that retain information across interactions and use tools to read, modify, and create persistent artifacts. As these artifacts are shared between users, they form an indirect communication channel between otherwise independent a…</p>
+    </article>
+    
+  </section>
+  
+
+  <footer>
+    Curated automatically from public, keyless sources.
+    Built by someone who works in the security space.<br>
+    <a href="../index.html">Archive</a> · <a href="../feed.xml">Subscribe via RSS</a> ·
+    <a href="https://github.com/signal-desk-v2">Contribute on GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
