@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Desk — Issue #59 · 2026-10-14</title>
+<link rel="alternate" type="application/rss+xml" title="Signal Desk" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1EE; --ink:#14231C; --accent:#1E6E52; --accent-soft:#D8E6DF;
+    --amber:#B4690E; --critical:#A32C1C; --muted:#5B6B62; --rule:#C6D0C9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.55;}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px;}
+  a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;}
+  a:hover{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  /* masthead */
+  header{border-bottom:3px solid var(--ink);padding-bottom:18px;margin-bottom:8px;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+          text-transform:uppercase;color:var(--muted);}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(38px,8vw,58px);line-height:.95;margin:.15em 0 .1em;letter-spacing:-.02em;}
+  h1 .dot{color:var(--accent);}
+  .issue-line{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+              display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* frequency rule under masthead */
+  .freq{display:flex;gap:3px;align-items:flex-end;height:16px;margin:14px 0 34px;}
+  .freq span{width:4px;background:var(--accent);opacity:.75;border-radius:1px;}
+
+  /* sections */
+  section{margin-bottom:46px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
+           letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+           border-bottom:1px solid var(--rule);padding-bottom:7px;margin-bottom:18px;
+           display:flex;justify-content:space-between;}
+  .eyebrow .count{color:var(--muted);}
+
+  article{margin-bottom:22px;}
+  .headline{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+            font-size:19px;line-height:1.3;margin:0 0 3px;}
+  .meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+        display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px;}
+  .signal{color:var(--accent);letter-spacing:1px;font-size:11px;}
+  .summary{margin:0;font-size:15.5px;color:#2A3A32;}
+
+  /* incidents */
+  .incident{border-left:3px solid var(--rule);padding-left:14px;}
+  .incident.sev-critical{border-color:var(--critical);}
+  .incident.sev-high{border-color:var(--amber);}
+  .incident.sev-medium{border-color:var(--accent);}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;
+        letter-spacing:.08em;padding:1px 7px;border-radius:3px;background:var(--accent-soft);color:var(--accent);}
+  .sev-critical .chip{background:#F3DAD5;color:var(--critical);}
+  .sev-high .chip{background:#F2E3CC;color:var(--amber);}
+
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding-top:16px;
+         font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);line-height:1.8;}
+  footer a{color:var(--accent);}
+  @media (prefers-reduced-motion: no-preference){
+    article{animation:rise .35s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily intelligence brief · No keys, no tracking</div>
+    <h1>Signal Desk<span class="dot">.</span></h1>
+    <div class="issue-line">
+      <span>ISSUE #059 — Wednesday, October 14, 2026</span>
+      <span>AI security, fraud & trust-and-safety intelligence</span>
+    </div>
+  </header>
+  <div class="freq" aria-hidden="true">
+    <span style="height:5px"></span><span style="height:9px"></span><span style="height:4px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:14px"></span><span style="height:6px"></span><span style="height:10px"></span><span style="height:3px"></span><span style="height:8px"></span><span style="height:13px"></span><span style="height:5px"></span><span style="height:11px"></span><span style="height:7px"></span><span style="height:4px"></span><span style="height:9px"></span><span style="height:15px"></span><span style="height:6px"></span><span style="height:8px"></span><span style="height:3px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:10px"></span><span style="height:5px"></span>
+  </div>
+
+  
+  <section>
+    <div class="eyebrow"><span>01 · Top Signals</span><span class="count">8 stories</span></div>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 7">▮▮▮▮▮</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Oct/13/llm-gemini/">llm-gemini 0.35</a></h2>
+      <p class="summary">Release: llm-gemini 0.35 I added support to llm-gemini for the new Gemini 4 Argon model, made available today via the Gemini API and for customers of their $100/month subscription plan. Here are the low, medium and high pelicans . As expected, they are all excellent: Gemini has …</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>Krebs on Security</span>
+      </div>
+      <h2 class="headline"><a href="https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/">Microsoft Patches More Than 1,400 Security Flaws</a></h2>
+      <p class="summary">Microsoft today issued updates to fix more than 1,400 security vulnerabilities in its Windows operating systems and other software. Today's epic patch batch dwarfs September's record of nearly 1,000 fixes, which was already about ten times the normal monthly patch load from Redm…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>Embrace The Red (wunderwuzzi)</span>
+      </div>
+      <h2 class="headline"><a href="https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/">Visual Studio Copilot and SSMS Remote Code Execution (CVE-2026-103572)</a></h2>
+      <p class="summary">A . is all you need! Today Microsoft shipped the patch for a vulnerability in Visual Studio Copilot that I reported in August. Microsoft classified it as Important severity Remote Code Execution vulnerability. At the root cause it allows Copilot in Visual Studio or SQL Server Ma…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html">Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug</a></h2>
+      <p class="summary">Microsoft on Tuesday shattered its own Patch Tuesday record by shipping patches for a whopping 1,413 vulnerabilities, including one that it said has come under active exploitation. These include 1,102 flaws in Windows, 134 in Office, 61 in Developer Tools, 36 in SharePoint Serve…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/10/openai-employee-arrested-for-allegedly.html">OpenAI Employee Arrested for Allegedly Planting Hidden Recorder in Executive Conference Room</a></h2>
+      <p class="summary">A Saudi National and employee of OpenAI has been arrested for allegedly planting a hidden recording device in an executive conference room at the company's San Francisco offices to covertly record sensitive conversations. Abdulrahman Alfozan, 35, has been charged with using or e…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/10/anthropic-warns-small-ai-models-could.html">Anthropic Warns Small AI Models Could Soon Form Self-Propagating IoT Botnets</a></h2>
+      <p class="summary">Small artificial intelligence (AI) models may be months away from developing capabilities to self-replicate on IoT devices like smart ovens and off-brand Android TV boxes, according to a warning from Anthropic. The frontier AI lab said small AI models could form autonomous, self…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/10/low-cost-android-phones-ship-with.html">Low-Cost Android Phones Ship With Preinstalled Malware That Turns Them Into Residential Proxies</a></h2>
+      <p class="summary">Low-cost Android smartphones have been shipped with malicious software baked into the device firmware, allowing bad actors to covertly install apps, conduct ad fraud, and turn devices into residential proxies. The activity, which targets Android devices built on MediaTek platfor…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/openai-engineer-arrested-for-allegedly-planting-spy-device-in-office/">OpenAI engineer arrested for allegedly planting spy device in office</a></h2>
+      <p class="summary">A Saudi OpenAI engineer has been arrested for allegedly planting a hidden recording device in an executive conference room at the company's San Francisco offices to secretly record sensitive conversations. [...]</p>
+    </article>
+    
+  </section>
+  
+
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>03 · Interesting Discussions</span><span class="count">HN · Reddit · Lobsters</span></div>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50059523">thread ↗</a></div>
+      <h2 class="headline"><a href="https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/">AI coding agents generate more code, but not more software</a></h2>
+      <p class="summary">361 points · 301 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50057278">thread ↗</a></div>
+      <h2 class="headline"><a href="https://mortoray.com/why-arent-ai-companies-being-charged-for-hacking/">Why aren't AI companies being charged for hacking?</a></h2>
+      <p class="summary">329 points · 367 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50070010">thread ↗</a></div>
+      <h2 class="headline"><a href="https://github.com/LargeModGames/spotatui">Show HN: Spotatui, a Spotify TUI/GUI without web API rate limits</a></h2>
+      <p class="summary">67 points · 13 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50059096">thread ↗</a></div>
+      <h2 class="headline"><a href="https://news.ycombinator.com/item?id=50059096">Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents</a></h2>
+      <p class="summary">159 points · 117 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/mldt0o/finding_90_000_remote_code_execution">thread ↗</a></div>
+      <h2 class="headline"><a href="https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce">Finding a $90,000 Remote Code Execution Vulnerability in Google</a></h2>
+      <p class="summary">61 points · 2 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/6r6mts/model_backdoors_are_easy_create_hard">thread ↗</a></div>
+      <h2 class="headline"><a href="https://equistamp.substack.com/p/model-backdoors-are-easy-to-create">Model backdoors are easy to create and hard to reliably remove</a></h2>
+      <p class="summary">0 points · 0 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/nsmm3j/freeze_controller_defrost_food">thread ↗</a></div>
+      <h2 class="headline"><a href="https://claroty.com/team82/research/freeze-the-controller-defrost-the-food-uncovering-vulnerabilities-in-danfoss-refrigeration-controllers">Freeze the Controller, Defrost the Food: Uncovering Vulnerabilities in Danfoss Refrigeration Controllers</a></h2>
+      <p class="summary">7 points · 0 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/u4vlin/french_supermarket_chains_say">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.afp.com/en/french-supermarket-chains-say-cyberattack-forced-refrigerator-shutdown">French supermarket chains say cyberattack forced refrigerator shutdown</a></h2>
+      <p class="summary">34 points · 22 comments on Lobsters</p>
+    </article>
+    
+  </section>
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>04 · Research Corner</span><span class="count">new on arXiv</span></div>
+    
+    <article>
+      <div class="meta"><span>2026-10-13</span><span>Dominik Seip, Bartol Markovinović, Matthias Hein</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2610.18508v1">Towards Safe Autonomy for Computer Use</a></h2>
+      <p class="summary">The safety of LLM-based agents currently rests on alignment training and safety classifiers, neither of which can rule out that a sophisticated indirect prompt injection (IPI) goes through and causes significant harm. Recent work therefore builds agents with information-flow guarantees that rely on…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-10-13</span><span>Kristoffer Hempel, Nils Loose, Lorenzo Cavallaro et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2610.18457v1">Kairos: Transactional Security Enforcement at the System Boundary for LLM Agents</a></h2>
+      <p class="summary">Large language model (LLM) agents are becoming an integral part of the software development lifecycle, and the capabilities granted to them allow an agent to act with the user's authority on any resource it can access. The reach that gives an agent its utility is equally available to an attacker wh…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-10-13</span><span>Kaan Kale, Sriram Vishwanath</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2610.18408v1">Prompt-Injection Probes Learn the Conversation, Not Just the Injection</a></h2>
+      <p class="summary">Linear probes on a model's hidden states are used as cheap monitors for indirect prompt injection: they screen the tool outputs an agent reads and send suspicious ones to a slower second check, so every false alarm has a cost. But a probe learns whatever separates its training examples. The standar…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-10-13</span><span>Emory Salaun, Syed Ayon, Kaleel Mahmood et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2610.18724v1">AIRRI: Towards a Human-Readable, Machine-Resistant Reading Interface</a></h2>
+      <p class="summary">The rapid advancement of image-to-text extraction systems and large language models (LLMs) poses new challenges for educational assessment by making assignment materials easy to transcribe and solve with minimal human effort. To address this problem, we present AIRRI (Artificial Intelligence Resili…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-10-13</span><span>Arastun Mammadli, Herbert Woisetschläger, Jawad Fayaz et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2610.18354v1">Choosing LLMs for Strategic Agent Interactions</a></h2>
+      <p class="summary">Game-theoretic benchmarks claim that large language model (LLM) strategic decision-making varies across game types, interaction structures, and capability dimensions. However, they only evaluate strategic performance across individual fixed models. In parallel, contemporary LLM routers pick models …</p>
+    </article>
+    
+  </section>
+  
+
+  <footer>
+    Curated automatically from public, keyless sources.
+    Built by someone who works in the security space.<br>
+    <a href="../index.html">Archive</a> · <a href="../feed.xml">Subscribe via RSS</a> ·
+    <a href="https://github.com/signal-desk-v2">Contribute on GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
