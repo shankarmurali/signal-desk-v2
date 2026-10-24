@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Desk — Issue #69 · 2026-10-24</title>
+<link rel="alternate" type="application/rss+xml" title="Signal Desk" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1EE; --ink:#14231C; --accent:#1E6E52; --accent-soft:#D8E6DF;
+    --amber:#B4690E; --critical:#A32C1C; --muted:#5B6B62; --rule:#C6D0C9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.55;}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px;}
+  a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;}
+  a:hover{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  /* masthead */
+  header{border-bottom:3px solid var(--ink);padding-bottom:18px;margin-bottom:8px;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+          text-transform:uppercase;color:var(--muted);}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(38px,8vw,58px);line-height:.95;margin:.15em 0 .1em;letter-spacing:-.02em;}
+  h1 .dot{color:var(--accent);}
+  .issue-line{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+              display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* frequency rule under masthead */
+  .freq{display:flex;gap:3px;align-items:flex-end;height:16px;margin:14px 0 34px;}
+  .freq span{width:4px;background:var(--accent);opacity:.75;border-radius:1px;}
+
+  /* sections */
+  section{margin-bottom:46px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
+           letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+           border-bottom:1px solid var(--rule);padding-bottom:7px;margin-bottom:18px;
+           display:flex;justify-content:space-between;}
+  .eyebrow .count{color:var(--muted);}
+
+  article{margin-bottom:22px;}
+  .headline{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+            font-size:19px;line-height:1.3;margin:0 0 3px;}
+  .meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+        display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px;}
+  .signal{color:var(--accent);letter-spacing:1px;font-size:11px;}
+  .summary{margin:0;font-size:15.5px;color:#2A3A32;}
+
+  /* incidents */
+  .incident{border-left:3px solid var(--rule);padding-left:14px;}
+  .incident.sev-critical{border-color:var(--critical);}
+  .incident.sev-high{border-color:var(--amber);}
+  .incident.sev-medium{border-color:var(--accent);}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;
+        letter-spacing:.08em;padding:1px 7px;border-radius:3px;background:var(--accent-soft);color:var(--accent);}
+  .sev-critical .chip{background:#F3DAD5;color:var(--critical);}
+  .sev-high .chip{background:#F2E3CC;color:var(--amber);}
+
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding-top:16px;
+         font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);line-height:1.8;}
+  footer a{color:var(--accent);}
+  @media (prefers-reduced-motion: no-preference){
+    article{animation:rise .35s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily intelligence brief · No keys, no tracking</div>
+    <h1>Signal Desk<span class="dot">.</span></h1>
+    <div class="issue-line">
+      <span>ISSUE #069 — Saturday, October 24, 2026</span>
+      <span>AI security, fraud & trust-and-safety intelligence</span>
+    </div>
+  </header>
+  <div class="freq" aria-hidden="true">
+    <span style="height:5px"></span><span style="height:9px"></span><span style="height:4px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:14px"></span><span style="height:6px"></span><span style="height:10px"></span><span style="height:3px"></span><span style="height:8px"></span><span style="height:13px"></span><span style="height:5px"></span><span style="height:11px"></span><span style="height:7px"></span><span style="height:4px"></span><span style="height:9px"></span><span style="height:15px"></span><span style="height:6px"></span><span style="height:8px"></span><span style="height:3px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:10px"></span><span style="height:5px"></span>
+  </div>
+
+  
+  <section>
+    <div class="eyebrow"><span>01 · Top Signals</span><span class="count">8 stories</span></div>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 9">▮▮▮▮▮</span>
+        <span>Microsoft Security Blog</span>
+      </div>
+      <h2 class="headline"><a href="https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/">Inside the LiteLLM 1.107.0 supply chain compromise: Credential theft through Python startup hooks</a></h2>
+      <p class="summary">Microsoft Threat Intelligence analyzes the LiteLLM 1.107.0 compromise, including Python startup hooks, credential theft, remote code loading, detections, and mitigations. The post Inside the LiteLLM 1.107.0 supply chain compromise: Credential theft through Python startup hooks a…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 8">▮▮▮▮▮</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/10/critical-x402-sdk-flaw-could-let.html">Critical x402 SDK Flaw Could Let Malicious APIs Drain AI Agents’ Token Balances</a></h2>
+      <p class="summary">AI agents paying for API calls with the x402 SDKs could sign a payment for their full balance of a supported token if a malicious API asked for it, security firm V12 said on October 22. The cause was the SDKs' default client, which set no spending limit until releases on August …</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 7">▮▮▮▮▯</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/">Microsoft Teams to get AI-powered, context-aware phishing detection</a></h2>
+      <p class="summary">Microsoft has announced plans to add AI-powered phishing detection to Teams messages starting in early November 2026. [...]</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▯</span>
+        <span>Schneier on Security</span>
+      </div>
+      <h2 class="headline"><a href="https://www.schneier.com/blog/archives/2026/10/friday-squid-blogging-increasing-squid-populations.html">Friday Squid Blogging: Increasing Squid Populations</a></h2>
+      <p class="summary">This article in Nature argues that it’s due to an overfishing of predators and warming sea temperatures. As usual, you can also use this squid post to talk about the security stories in the news that I haven’t covered. Blog moderation policy.</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▯</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html">Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions</a></h2>
+      <p class="summary">Cybersecurity researchers have discovered an artificial intelligence (AI)-driven intrusion ecosystem run by affiliates of the INC and The Gentlemen ransomware groups. Central to the operation is an "Autonomous Red Team Kill Chain Framework" referred to as Phantom. The threat act…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▯</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/">You gave your AI agent access, but who is giving it orders?</a></h2>
+      <p class="summary">AI agents can be manipulated through malicious emails, websites, and plugins into executing commands, stealing data, or deleting files using their legitimate permissions. Gen Digital explains how its Agent Trust Hub helps protect agents through skill verification, secure connect…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▯▯</span>
+        <span>Schneier on Security</span>
+      </div>
+      <h2 class="headline"><a href="https://www.schneier.com/blog/archives/2026/10/compromised-tls-certificates.html">Compromised TLS Certificates</a></h2>
+      <p class="summary">The Indian CA eMudhra Limited has eight TLS certificates with laughably weak private keys : The compromised eMudhra keys were defective at a level that’s challenging the imagination of many of the engineers studying the incident. A normal size for a NIST P-384 elliptic curve cry…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▯▯</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html">BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations</a></h2>
+      <p class="summary">Diplomatic organizations in Central Asia have been targeted by a sophisticated new Unified Extensible Firmware Interface (UEFI) bootkit called BlackX. The activity, which singled out diplomatic entities in Tajikistan, Uzbekistan, and Turkmenistan in early 2026, is suspected to b…</p>
+    </article>
+    
+  </section>
+  
+
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>03 · Interesting Discussions</span><span class="count">HN · Reddit · Lobsters</span></div>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50198675">thread ↗</a></div>
+      <h2 class="headline"><a href="https://github.com/NVIDIA/OpenShell">OpenShell – A safe, private runtime for fleets of autonomous AI agents</a></h2>
+      <p class="summary">490 points · 213 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50180752">thread ↗</a></div>
+      <h2 class="headline"><a href="https://openai.com/index/scaling-ai-research-for-complex-biological-data/">Using thousands of AI agents to uncover new leads in biological data</a></h2>
+      <p class="summary">159 points · 105 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50183253">thread ↗</a></div>
+      <h2 class="headline"><a href="https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/">AI agent fixed the bug, but what else did it change?</a></h2>
+      <p class="summary">53 points · 6 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50183892">thread ↗</a></div>
+      <h2 class="headline"><a href="https://github.com/omnara-ai/omnara">Show HN: Omnara – Open-source alternative to Claude Managed Agents</a></h2>
+      <p class="summary">112 points · 34 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50179857">thread ↗</a></div>
+      <h2 class="headline"><a href="https://layerfs.ai/">LayerFS: A filesystem for AI coding agents</a></h2>
+      <p class="summary">76 points · 47 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/zug8xv/indian_government_sites_are_serving">thread ↗</a></div>
+      <h2 class="headline"><a href="https://captnemo.in/blog/2026/10/23/emsign-revoked-gov-in/">Indian government sites are serving revoked eMudhra certificates</a></h2>
+      <p class="summary">5 points · 0 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/qc1ahp/distributed_data_centralized_fixes">thread ↗</a></div>
+      <h2 class="headline"><a href="https://miren.dev/blog/distributed-data-centralized-fixes">Distributed data, centralized fixes</a></h2>
+      <p class="summary">1 points · 1 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/hq3tu8/railway_preliminary_report_oct_21st">thread ↗</a></div>
+      <h2 class="headline"><a href="https://blog.railway.com/p/preliminary-report-october-security-incident">Railway Preliminary Report: Oct 21st Security Incident</a></h2>
+      <p class="summary">3 points · 7 comments on Lobsters</p>
+    </article>
+    
+  </section>
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>04 · Research Corner</span><span class="count">new on arXiv</span></div>
+    
+    <article>
+      <div class="meta"><span>2026-10-22</span><span>Chao Gu, Quanyan Zhu</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2610.31376v1">Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action</a></h2>
+      <p class="summary">This paper studies the problem of safe tool execution for large language model (LLM) agents under prompt injection. Using Petri nets, we formalize the execution harness between the LLM and its tools as a supervisory control problem, in which marks represent capabilities, approvals and budgets. Sinc…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-10-22</span><span>Isaac Gibbs, Elise L. Han, Ryan J. Tibshirani et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2610.31662v1">Reliable AI-Assisted Decisions via Selective Auditing</a></h2>
+      <p class="summary">We consider online monitoring of an AI system that produces a sequence of decisions. At each round, the system outputs a proposed decision together with a confidence score estimating the trustworthiness of the decision. The decision and confidence score need not be produced by the same model: for e…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-10-22</span><span>Pellegrino Casoria, Simon Pietro Romano</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2610.31573v1">Social-HUMINT: An LLM-Augmented Unified Framework for Measuring Social Media Exposure</a></h2>
+      <p class="summary">In the post-API landscape, social-media profiling has become inexpensive and automated: Large Language Models (LLMs) can extract structured information from unstructured content and deduce attributes users never disclosed. A person's true exposure is not what they post but what can be inferred from…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-10-22</span><span>Roberto Passaro, Ariel Flint, Romualdo Pastor-Satorras et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2610.31165v1">Network topology shapes consensus and vulnerability in LLM populations</a></h2>
+      <p class="summary">As large language models (LLMs) are deployed in interacting populations, their collective behaviour depends not only on the models but also on who interacts with whom. Studies of convention formation in LLM populations have mainly tested well-mixed interactions. We place policies extracted from fou…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-10-22</span><span>Andrés Daniel Godoy Ortiz</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2610.30715v1">Meaning Contracts: Local Semantic Geometry in Large Language Models</a></h2>
+      <p class="summary">This paper studies the local geometry of semantic meaning in large language models. Current representation analyses ask whether meanings are close in embedding space, or whether linear probes separate semantic classes, but they do not characterize the within-concept local geometry: what is invarian…</p>
+    </article>
+    
+  </section>
+  
+
+  <footer>
+    Curated automatically from public, keyless sources.
+    Built by someone who works in the security space.<br>
+    <a href="../index.html">Archive</a> · <a href="../feed.xml">Subscribe via RSS</a> ·
+    <a href="https://github.com/signal-desk-v2">Contribute on GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
