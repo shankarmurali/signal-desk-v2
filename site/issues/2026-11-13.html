@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Desk — Issue #89 · 2026-11-13</title>
+<link rel="alternate" type="application/rss+xml" title="Signal Desk" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1EE; --ink:#14231C; --accent:#1E6E52; --accent-soft:#D8E6DF;
+    --amber:#B4690E; --critical:#A32C1C; --muted:#5B6B62; --rule:#C6D0C9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.55;}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px;}
+  a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;}
+  a:hover{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  /* masthead */
+  header{border-bottom:3px solid var(--ink);padding-bottom:18px;margin-bottom:8px;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+          text-transform:uppercase;color:var(--muted);}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(38px,8vw,58px);line-height:.95;margin:.15em 0 .1em;letter-spacing:-.02em;}
+  h1 .dot{color:var(--accent);}
+  .issue-line{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+              display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* frequency rule under masthead */
+  .freq{display:flex;gap:3px;align-items:flex-end;height:16px;margin:14px 0 34px;}
+  .freq span{width:4px;background:var(--accent);opacity:.75;border-radius:1px;}
+
+  /* sections */
+  section{margin-bottom:46px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
+           letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+           border-bottom:1px solid var(--rule);padding-bottom:7px;margin-bottom:18px;
+           display:flex;justify-content:space-between;}
+  .eyebrow .count{color:var(--muted);}
+
+  article{margin-bottom:22px;}
+  .headline{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+            font-size:19px;line-height:1.3;margin:0 0 3px;}
+  .meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+        display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px;}
+  .signal{color:var(--accent);letter-spacing:1px;font-size:11px;}
+  .summary{margin:0;font-size:15.5px;color:#2A3A32;}
+
+  /* incidents */
+  .incident{border-left:3px solid var(--rule);padding-left:14px;}
+  .incident.sev-critical{border-color:var(--critical);}
+  .incident.sev-high{border-color:var(--amber);}
+  .incident.sev-medium{border-color:var(--accent);}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;
+        letter-spacing:.08em;padding:1px 7px;border-radius:3px;background:var(--accent-soft);color:var(--accent);}
+  .sev-critical .chip{background:#F3DAD5;color:var(--critical);}
+  .sev-high .chip{background:#F2E3CC;color:var(--amber);}
+
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding-top:16px;
+         font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);line-height:1.8;}
+  footer a{color:var(--accent);}
+  @media (prefers-reduced-motion: no-preference){
+    article{animation:rise .35s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily intelligence brief · No keys, no tracking</div>
+    <h1>Signal Desk<span class="dot">.</span></h1>
+    <div class="issue-line">
+      <span>ISSUE #089 — Friday, November 13, 2026</span>
+      <span>AI security, fraud & trust-and-safety intelligence</span>
+    </div>
+  </header>
+  <div class="freq" aria-hidden="true">
+    <span style="height:5px"></span><span style="height:9px"></span><span style="height:4px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:14px"></span><span style="height:6px"></span><span style="height:10px"></span><span style="height:3px"></span><span style="height:8px"></span><span style="height:13px"></span><span style="height:5px"></span><span style="height:11px"></span><span style="height:7px"></span><span style="height:4px"></span><span style="height:9px"></span><span style="height:15px"></span><span style="height:6px"></span><span style="height:8px"></span><span style="height:3px"></span><span style="height:12px"></span><span style="height:7px"></span><span style="height:10px"></span><span style="height:5px"></span>
+  </div>
+
+  
+  <section>
+    <div class="eyebrow"><span>01 · Top Signals</span><span class="count">8 stories</span></div>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 7">▮▮▮▮▮</span>
+        <span>Simon Willison</span>
+      </div>
+      <h2 class="headline"><a href="https://simonwillison.net/2026/Nov/12/llm-gemini/">llm-gemini 0.37</a></h2>
+      <p class="summary">Release: llm-gemini 0.37 Google launched Gemini 4 Hydrogen today - the lowest cost member of the Gemini 4 family. It's actually not too far off the price of its much bigger siblings, Carbon and Argon. I'm finding Gemini 4's pricing really confusing. Here's the pricing scheme: Mo…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html">Calendar Invites and Live Proxies: Inside a Google Session Hijacking Campaign</a></h2>
+      <p class="summary">Since mid-August 2026, a phishing operation has been stealing live Google sessions from corporate users. Every check defenders normally lean on to judge a link came back clean, and the operator designed it that way on purpose. The Threat Research team at Material Security spotte…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 6">▮▮▮▮▮</span>
+        <span>Microsoft Security Blog</span>
+      </div>
+      <h2 class="headline"><a href="https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/">Trained to betray: How post-training supply chain attacks hijack coding agents</a></h2>
+      <p class="summary">Microsoft Defender Research and the AI Red Team discuss how poisoned datasets and poisoned model checkpoints can trigger remote code execution and other malicious activities. The post Trained to betray: How post-training supply chain attacks hijack coding agents appeared first o…</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>Schneier on Security</span>
+      </div>
+      <h2 class="headline"><a href="https://www.schneier.com/blog/archives/2026/11/another-way-police-are-locating-people-from-their-smartphones.html">Another Way Police Are Locating People from Their Smartphones</a></h2>
+      <p class="summary">Penlink’s Webloc is an application that locates people using information from the weather, gaming, email, and religious apps on their phone. It’s sold to the police. The tool collects vast quantities of location data from smartphones via commonly used weather, gaming, email and …</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html">Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2</a></h2>
+      <p class="summary">N-able on Thursday said it's taking additional precautions in the wake of public disclosure of a new set of flaws tracked as 4EverAble2Shell and Agent2Shell. "We are restricting certain N-central features and integrations," the company said in a Thursday update. "These measures …</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/">New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks</a></h2>
+      <p class="summary">A new worm-like malware toolkit named SCKit was deployed in the recent ScreenConnect attacks targeting managed service providers (MSPs), designed to spread from infected customer devices to MSP technicians' computers and compromise additional managed networks. [...]</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 5">▮▮▮▮▯</span>
+        <span>BleepingComputer</span>
+      </div>
+      <h2 class="headline"><a href="https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/">Hackers compromise 4,800 GitHub accounts to steal cloud credentials</a></h2>
+      <p class="summary">A new campaign dubbed 'wfx-loot' has unfolded on GitHub where threat actors used 4,837 compromised accounts to probe 61,764 repositories, open pull requests, and push secrets-stealing malware. [...]</p>
+    </article>
+    
+    <article>
+      <div class="meta">
+        
+        <span class="signal" title="signal strength 4">▮▮▮▯▯</span>
+        <span>The Hacker News</span>
+      </div>
+      <h2 class="headline"><a href="https://thehackernews.com/2026/11/your-soc-sees-alert-but-does-it-know.html">Webinar: See How Identity Blind Spots Put Your SOC at Risk and How to Close Them</a></h2>
+      <p class="summary">Security teams have more alerts, logs, and monitoring tools than ever. Yet when an attack happens, one simple question can still take too long to answer: Who or what is behind this activity, and what can they access? A suspicious login might belong to an employee. An unusual API…</p>
+    </article>
+    
+  </section>
+  
+
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>03 · Interesting Discussions</span><span class="count">HN · Reddit · Lobsters</span></div>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50458900">thread ↗</a></div>
+      <h2 class="headline"><a href="https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/">United Airlines bans AI agents from booking flights on behalf of travelers</a></h2>
+      <p class="summary">669 points · 696 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50456631">thread ↗</a></div>
+      <h2 class="headline"><a href="https://github.com/aws/aws-emulator">AWS emulator</a></h2>
+      <p class="summary">973 points · 264 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/lnau2d/how_i_accidentally_became_millionaire">thread ↗</a></div>
+      <h2 class="headline"><a href="https://lyra.horse/blog/2026/11/disinformation-machine/">How I accidentally became a millionaire</a></h2>
+      <p class="summary">241 points · 28 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50455811">thread ↗</a></div>
+      <h2 class="headline"><a href="https://news.ycombinator.com/item?id=50455811">Launch HN: Pomerado (YC F26) – Turn any website into an MCP for agents</a></h2>
+      <p class="summary">61 points · 48 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50471650">thread ↗</a></div>
+      <h2 class="headline"><a href="https://github.com/Parcha-ai/agentrun/blob/main/README.md">Show HN: AgentRun – open-source, Self-improving Managed Agents</a></h2>
+      <p class="summary">98 points · 27 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Hacker News</span>
+        <a href="https://news.ycombinator.com/item?id=50471281">thread ↗</a></div>
+      <h2 class="headline"><a href="https://news.ycombinator.com/item?id=50471281">Show HN: Kapso – Iterative learning from enterprise data</a></h2>
+      <p class="summary">45 points · 10 comments on Hacker News</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/hreu0b/catching_prompt_injections_hidden_pdfs">thread ↗</a></div>
+      <h2 class="headline"><a href="https://tomclancy.info/joshua-judges-ruth.html">Catching prompt injections hidden in PDFs</a></h2>
+      <p class="summary">5 points · 2 comments on Lobsters</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>Lobsters</span>
+        <a href="https://lobste.rs/s/cjnwcg/from_digital_mischief_outright">thread ↗</a></div>
+      <h2 class="headline"><a href="https://unsung.aresluna.org/from-digital-mischief-to-outright-destruction">“From digital mischief to outright destruction”</a></h2>
+      <p class="summary">1 points · 0 comments on Lobsters</p>
+    </article>
+    
+  </section>
+  
+
+  
+  <section>
+    <div class="eyebrow"><span>04 · Research Corner</span><span class="count">new on arXiv</span></div>
+    
+    <article>
+      <div class="meta"><span>2026-11-12</span><span>Zimo Xu, Wenzhuo Liu, Hideki Nakayama</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2611.17115v1">CapLite: Prompt-Injection Defense for Small Language Model Agents without Model-Written Security Artifacts</a></h2>
+      <p class="summary">Enforcement defenses against prompt injection, such as CaMeL, Progent, IPIGuard and DRIFT, ask the agent's own model to write a security artifact (a program, a privilege policy, a dependency graph or a constraint list) that code then enforces. We ask whether small language model (SLM) agents can be…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-11-12</span><span>Yiheng Zhao, Runze Ji, Chenyu Yi et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2611.16744v1">Scale-Induced Semantic Shift in Visual Prompt Injection Against VLMs and Web Agents</a></h2>
+      <p class="summary">Visual content in multimedia systems may be resized, compressed, or re-rendered before it is interpreted by a vision-language model. We study a security failure mode in which these transformations change the machine-readable semantics of an image: a textual instruction is not recovered at a $512\ti…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-11-12</span><span>Fady Copty, Neta Haiby, Max Braitmaiere et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2611.16122v1">Intent-Aware Protection for AI Agents</a></h2>
+      <p class="summary">AI agents increasingly access enterprise data, invoke powerful tools, and act with limited human oversight. Existing security defenses primarily detect prompt injection, harmful outputs, or suspicious behavior, but do not determine whether an agent remains faithful to the purpose for which it was d…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-11-12</span><span>Hongyu Li, Zhan Yu, Zhe Zhao et al.</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2611.16183v1">Data-Efficient LLM Safety Alignment Guided by Interpretable Features</a></h2>
+      <p class="summary">Existing large language models typically rely on massive fine-tuning datasets for safety alignment, which results in higher costs for safety alignment and often leads to the problem of over-refusal. We propose Less is Safer (LIS), a compact yet highly effective dataset for safety alignment, constru…</p>
+    </article>
+    
+    <article>
+      <div class="meta"><span>2026-11-11</span><span>Hesham Elbakoury, Deep Shah, Ankur Sharma</span></div>
+      <h2 class="headline"><a href="http://arxiv.org/abs/2611.15911v1">Smart Model Routing for Order-of-Magnitude LLM Cost Reduction</a></h2>
+      <p class="summary">Frontier large language models (LLMs) deliver the strongest response quality but carry per-token prices often more than an order of magnitude above those of smaller, task-adequate models. Smart model routing addresses this mismatch by assigning each query to the cheapest model expected to answer it…</p>
+    </article>
+    
+  </section>
+  
+
+  <footer>
+    Curated automatically from public, keyless sources.
+    Built by someone who works in the security space.<br>
+    <a href="../index.html">Archive</a> · <a href="../feed.xml">Subscribe via RSS</a> ·
+    <a href="https://github.com/signal-desk-v2">Contribute on GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
